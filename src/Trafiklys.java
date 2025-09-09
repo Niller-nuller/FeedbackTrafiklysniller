@@ -13,13 +13,13 @@ public class Trafiklys {
         System.out.print("Hvad tid på dagen er det 0-24?.");
         int dTime = input.nextInt();
 
-        System.out.println("Er trafikken lov eller high");
+        System.out.println("Er trafikken høj eller lav?");
         String aTraffic = input.next();
 
-        System.out.println("Skal du til erhverv, bolig eller blandet.");
+        System.out.println("Skal du til erhverv, bolig eller blandet?");
         String dArea = input.next();
 
-        System.out.println("Er det en nødsitasation");
+        System.out.println("Er det en nødsitasation, ja eller nej?");
         String dEmer = input.next();
 
         //Tid
@@ -33,7 +33,7 @@ public class Trafiklys {
              nTime = 3;
         }
         //Traffik
-        if (Objects.equals(aTraffic, "high") || Objects.equals(aTraffic, "High")) {
+        if (Objects.equals(aTraffic, "høj") || Objects.equals(aTraffic, "Høj")) {
              nTraf = 1;
         }
         else{
@@ -54,19 +54,19 @@ public class Trafiklys {
 
         //Trafik Bestemelse
         if (nTime == 1 && nTraf == 0 || nEmer){
-            System.out.println("Traffik flyver");
+            System.out.println("\"\\uD83D\\uDFE9 - Grønt lys\""+"Traffik flyver");
         }
         else if (nTime == 3 && nTraf == 0){
-            System.out.println("Traffic er langsom");
+            System.out.println("\uD83D\uDFE8 - Gult lys"+"Traffic er langsom");
         }
         else if (nTime == 2){
-            System.out.println("Traffic er langsom");
+            System.out.println("\uD83D\uDFE8 - Gult lys"+"Traffic er langsom");
         }
         else if (nTime == 3 && nTraf == 1){
-            System.out.println("Traffic er stoppet");
+            System.out.println("\uD83D\uDFE5 - Rødt lys"+"Traffic er stoppet");
         }
         else {
-            System.out.println("Traffic er stoppet");
+            System.out.println("\uD83D\uDFE5 - Rødt lys"+"Traffic er stoppet");
         }
         //Adgangs krav
         if (nTime == 3 && nArea == 1 && nEmer == false){

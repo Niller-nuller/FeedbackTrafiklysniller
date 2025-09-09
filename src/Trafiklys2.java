@@ -9,7 +9,7 @@ public class Trafiklys2 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Indksriv: 1Dag, 2aften eller nat");
+        System.out.print("Indksriv tid på dagen 0-24:");
         int uTime = input.nextInt();
 
 //        System.out.println("Indskriv trafik mængde lav eller hæj");
